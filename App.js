@@ -19,24 +19,42 @@ class App extends Component {
     let tap = () => {
       let masa = this.state.massa;
       let tinggi = this.state.tinggi / 100;
-      this.setState({ tinggi: tinggi });
+      this.setState({
+        tinggi: tinggi
+      });
       let hasil = masa / (tinggi * tinggi);
-      this.setState({ imt: hasil });
+      this.setState({
+        imt: hasil
+      });
       if (hasil < 18.5) {
         this.setState({
           result: Alert.alert('BB Anda Kurang !'),
           res: 'BB Anda Kurang !'
         })
       } else if (hasil >= 18.5 && hasil <= 24.9) {
-        this.setState({ result: Alert.alert('BB Anda Ideal !'), res: 'BB Anda Ideal !' })
+        this.setState({
+          result: Alert.alert('BB Anda Ideal !'),
+          res: 'BB Anda Ideal !'
+        })
       } else if (hasil >= 25.0 && hasil <= 29.9) {
-        this.setState({ result: Alert.alert('BB Anda Berlebih !'), res: 'BB Anda Berlebih !' })
+        this.setState({
+          result: Alert.alert('BB Anda Berlebih !'),
+          res: 'BB Anda Berlebih !'
+        })
       } else if (hasil >= 30.0 && hasil <= 39.9) {
-        this.setState({ result: Alert.alert('BB Anda Sangat Berlebih !'), res: 'BB Anda Sangat Berlebih !' })
+        this.setState({
+          result: Alert.alert('BB Anda Sangat Berlebih !'),
+          res: 'BB Anda Sangat Berlebih !'
+        })
       } else if (hasil > 39.9) {
-        this.setState({ result: Alert.alert(' Obesitas !! '), res: ' Obesitas !! ' })
+        this.setState({
+          result: Alert.alert(' Obesitas !! '),
+          res: ' Obesitas !! '
+        })
       }
-      this.setState({ submit: true })
+      this.setState({
+        submit: true
+      })
     }
 
     return (
